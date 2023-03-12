@@ -1,0 +1,240 @@
+:root{
+   --mint: #3EB489;
+   --grey: #7f7f7f;
+}
+
+* { 
+   padding: 0;
+   margin: 0;
+}
+
+:focus { outline: none; }
+
+html {
+   max-width: 100%;
+   scroll-behavior: smooth;
+   margin: auto;
+}
+
+.container {
+   max-width: 90%;
+   margin: 0 auto;
+   color: var(--mint);
+}
+
+.container:hover{
+   color: black;
+   transition: all 0.3s ease;
+   cursor: pointer;
+}
+
+.container .keyboard-down-img{
+   opacity:0; /*Элемент полностью прозрачный (невидимый)*/
+   transition: 0.5s; /*Скорость перехода состояния элемента*/
+}
+
+.container:hover .keyboard-down-img{
+   opacity:1;
+   transition: 0.5s;
+}
+
+.header-title {
+   height: 60px;
+   width: 95%;
+   padding-top: 50px;
+   margin-left: auto;
+   padding-bottom: 20px;
+   border-bottom: 1px solid var(--grey)
+}
+
+.title {
+   font-family: 'Inika';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 60px;
+   line-height: 52px;
+   color: black;
+}
+
+.memes  {
+   width: 95%;
+   height: 50px;
+   margin-left: auto;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   border-bottom: 1px solid var(--grey);
+}
+
+.memes:active {
+   color: var(--mint);
+   transform: translate(1em, 0.75em);
+}
+
+.no-line-memes {
+   border-bottom: 0px solid var(--grey);
+}
+
+.memes-title {
+   font-family: 'Inika';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 40px;
+   line-height: 52px;
+}
+
+.content {
+   display: flex;
+}
+
+.content img {
+   margin-left: auto;
+   width: 5%;
+   
+}
+
+.memes-img {
+   visibility: hidden;
+   opacity: 0; /*Элемент полностью прозрачный (невидимый)*/
+   padding-left: 30%;
+}
+
+.memes-img  img{
+   width: 500px;
+   height: 470px;
+}
+
+.memes:hover,  .memes:focus-within{ 
+   height: 550px;
+   transition: all 0.5s ease;
+}
+
+
+
+.memes:hover .keyboard-down-img, .memes:focus-within .keyboard-down-img{
+   transform:rotate(180deg);
+}
+
+.memes:hover .memes-img{
+   visibility: visible;
+   opacity: 1;
+   transition: opacity 1.3s, visibility 1s;
+}
+
+.memes:focus-within .memes-img{
+   visibility: visible;
+   opacity: 1;
+}
+
+@media (max-width: 820px) {
+   .header-title {
+      height: 60px;
+      width: 95%;
+      padding-top: 50px;
+      margin-left: auto;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--grey)
+   }
+   
+   .title {
+      font-family: 'Inika';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 35px;
+      line-height: 52px;
+      color: black;
+   }
+   
+   .memes {
+      width: 95%;
+      height: 50px;
+      margin-left: auto;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--grey)
+   }
+   
+   .memes-title {
+      font-family: 'Inika';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 52px;
+   }
+   
+   .content img {
+      margin-left: auto;
+      width: 5%;
+      
+   }
+   
+   .memes-img  img{
+      width: 400px;
+      height: 370px;
+   }
+   
+   .memes:hover,  .memes:focus-within{ 
+      height: 450px;
+   }
+
+   .memes:hover .memes-img, .memes:focus-within .memes-img{
+      display: block;
+      padding-left: 20%;
+   }
+}
+
+@media (max-width: 380px) {
+   .header-title {
+      height: 60px;
+      width: 95%;
+      padding-top: 30px;
+      margin-left: auto;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--grey)
+   }
+   
+   .title {
+      font-family: 'Inika';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 52px;
+      color: black;
+   }
+   
+   .memes {
+      width: 95%;
+      height: 25px;
+      margin-left: auto;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid var(--grey)
+   }
+   
+   .memes-title {
+      font-family: 'Inika';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 22px;
+   }
+   
+   .content img {
+      margin-left: auto;
+      width: 5%;
+      
+   }
+   
+   .memes-img  img{
+      width: 200px;
+      height: 170px;
+   }
+   
+   .memes:hover,  .memes:focus-within{ 
+      height: 205px;
+   }
+
+   .memes:hover .memes-img, .memes:focus-within .memes-img{
+      display: block;
+      padding-left: 13%;
+   }
+}
